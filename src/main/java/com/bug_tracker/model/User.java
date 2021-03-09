@@ -1,6 +1,7 @@
 package com.bug_tracker.model;
 
 import javax.persistence.*;
+import java.security.SecureRandom;
 import java.util.Date;
 
 @Entity
@@ -27,12 +28,12 @@ public class User {
             this.firstName = firstName;
             this.lastName = lastName;
             this.email = email;
-            this.password = password;
             this.profilePicture = profilePicture;
             this.updateDate = updateDate;
             this.updatedBy = updatedBy;
             this.creationDate = creationDate;
             this.createdBy = createdBy;
+
         }
 
         public String getProfilePicture() {
