@@ -1,7 +1,9 @@
 package com.bug_tracker.model;
 
+import com.bug_tracker.emailValidation.UniqueEmail;
+
 import javax.persistence.*;
-import java.security.SecureRandom;
+import javax.validation.constraints.NotBlank;
 import java.util.Date;
 
 @Entity
@@ -24,7 +26,9 @@ public class User {
 
         public User(){ }
 
-        public User(String firstName, String lastName, String email, String password, String profilePicture, Date updateDate, Integer updatedBy, Date creationDate, Integer createdBy) {
+        public User(String firstName, String lastName, String email, String password, String profilePicture,
+                    Date updateDate, Integer updatedBy, Date creationDate, Integer createdBy) {
+
             this.firstName = firstName;
             this.lastName = lastName;
             this.email = email;
@@ -33,6 +37,7 @@ public class User {
             this.updatedBy = updatedBy;
             this.creationDate = creationDate;
             this.createdBy = createdBy;
+            this.password = password;
 
         }
 
